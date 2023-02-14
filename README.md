@@ -2,49 +2,157 @@
 
 ## **Overview of Credit_Risk_Analysis**
 
-### To study the dataset for PC collected from Amazon and use PySpark to perform the ETL process to extract the dataset, transform the data, connect to an AWS RDS instance, and load the transformed data into pgAdmin. Use PySpark to determine if there is any bias toward favorable reviews from Vine members in the dataset.
+### To assist LendingClub in analyzing the credit card credit dataset, use imbalanced-learn and scikit-learn libraries to build models using the following resampling algorithms and ensemble classifiers: RandomOverSampler, SMOTE, ClusterCentroids, SMOTEENN, BalancedRandomForestClassifier, and EasyEnsembleClassifier. Evaluate the performance of the abovementioned models and determine whether they should be used to predict credit risk. 
 
 ## **Results**
 
-- **How many Vine reviews and non-Vine reviews were there?**
+- **Resampling with RandomOverSampler algorithm**
 
-   * The total number of Vine reviews was 1775.
-   * The total number of non-Vine reviews was 77370.
-
+   * The balanced accuracy score was 0.6649.
+  <br> 
   <table>
   <tr>
-    <td>The Total Number of Vine and non-Vine Reviews</td>
+    <td>RandomOverSampler Algorithm Balanced Accuracy Score</td>
   </tr>
   <tr>
-    <td><img src="Images/Total_Paid_&_Unpaid_Reviews.PNG" width=400></td>
+    <td><img src="Images/Naive Random Oversampling Accuracy Score.PNG" width=500></td>
+  </tr>
+  </table> 
+  
+   * The precision scores for high_risk and low_risk were 0.01 and 1.00.
+   * The recall scores for high_risk and low_risk were 0.73 and 0.6.
+  <br> 
+  <table>
+  <tr>
+    <td>RandomOverSampler Algorithm Precision and Recall Scores</td>
+  </tr>
+  <tr>
+    <td><img src="Images/Naive Random Oversampling Report.PNG" width=500></td>
   </tr>
   </table>
   
-- **How many Vine reviews were 5 stars? How many non-Vine reviews were 5 stars?**
+- **Resampling with SMOTE algorithm**
   
-   * The number of 5-star Vine reviews was 783.
-   * The number of 5-star non-Vine reviews was 35944.
-  
+   * The balanced accuracy score was 0.6623.
+  <br> 
   <table>
   <tr>
-    <td>The Number of 5-star Vine and non-Vine Reviews</td>
+    <td>SMOTE Algorithm Balanced Accuracy Score</td>
   </tr>
   <tr>
-    <td><img src="Images/5_star_reviews_Counts.PNG" width=400></td>
+    <td><img src="Images/SMOTE Accuracy Score.PNG" width=500></td>
+  </tr>
+  </table> 
+  
+   * The precision scores for high_risk and low_risk were 0.01 and 1.00.
+   * The recall scores for high_risk and low_risk were 0.63 and 0.69.
+  <br> 
+  <table>
+  <tr>
+    <td>SMOTE Algorithm Precision and Recall Scores</td>
+  </tr>
+  <tr>
+    <td><img src="Images/SMOTE Report.PNG" width=500></td>
   </tr>
   </table>
   
-- **What percentage of Vine reviews were 5 stars? What percentage of non-Vine reviews were 5 stars?**
+- **Resampling with ClusterCentroids algorithm**
   
-   * The percentage of 5-star Vine reviews was 0.44.
-   * The percentage of 5-star non-Vine reviews was 0.46.
-   
+   * The balanced accuracy score was 0.5442.
+  <br> 
   <table>
   <tr>
-    <td>The Percentages of 5-star Vine and non-Vine Reviews</td>
+    <td>ClusterCentroids Algorithm Balanced Accuracy Score</td>
   </tr>
   <tr>
-    <td><img src="Images/5_star_reviews_Percentages.PNG" width=400></td>
+    <td><img src="Images/Cluster Centroids Accuracy Score.PNG" width=500></td>
+  </tr>
+  </table> 
+  
+   * The precision scores for high_risk and low_risk were 0.01 and 1.00.
+   * The recall scores for high_risk and low_risk were 0.69 and 0.4.
+  <br> 
+  <table>
+  <tr>
+    <td>ClusterCentroids Algorithm Precision and Recall Scores</td>
+  </tr>
+  <tr>
+    <td><img src="Images/Cluster Centroids Report.PNG" width=500></td>
+  </tr>
+  </table>
+  
+- **Resampling with SMOTEENN algorithm**
+  
+   * The balanced accuracy score was 0.6932.
+  <br> 
+  <table>
+  <tr>
+    <td>SMOTEENN Algorithm Balanced Accuracy Score</td>
+  </tr>
+  <tr>
+    <td><img src="Images/SMOTEENN Accuracy Score.PNG" width=500></td>
+  </tr>
+  </table> 
+  
+   * The precision scores for high_risk and low_risk were 0.01 and 1.00.
+   * The recall scores for high_risk and low_risk were 0.81 and 0.57.
+  <br> 
+  <table>
+  <tr>
+    <td>SMOTEENN Algorithm Precision and Recall Scores</td>
+  </tr>
+  <tr>
+    <td><img src="Images/SMOTEENN Report.PNG" width=500></td>
+  </tr>
+  </table>
+  
+- **BalancedRandomForestClassifier Algorithm**
+  
+   * The balanced accuracy score was 0.7888.
+  <br> 
+  <table>
+  <tr>
+    <td>BalancedRandomForestClassifier Algorithm Balanced Accuracy Score</td>
+  </tr>
+  <tr>
+    <td><img src="Images/Balanced Random Forest Accuracy Score.PNG" width=500></td>
+  </tr>
+  </table> 
+  
+   * The precision scores for high_risk and low_risk were 0.03 and 1.00.
+   * The recall scores for high_risk and low_risk were 0.70 and 0.87.
+  <br> 
+  <table>
+  <tr>
+    <td>BalancedRandomForestClassifier Algorithm Precision and Recall Scores</td>
+  </tr>
+  <tr>
+    <td><img src="Images/Balanced Random Forest Report.PNG" width=500></td>
+  </tr>
+  </table>
+
+- **EasyEnsembleClassifier Algorithm**
+  
+   * The balanced accuracy score was 0.9316.
+  <br> 
+  <table>
+  <tr>
+    <td>EasyEnsembleClassifier Algorithm Balanced Accuracy Score</td>
+  </tr>
+  <tr>
+    <td><img src="Images/Easy Ensemble AdaBoost Accuracy Score.PNG" width=500></td>
+  </tr>
+  </table> 
+  
+   * The precision scores for high_risk and low_risk were 0.09 and 1.00.
+   * The recall scores for high_risk and low_risk were 0.92 and 0.94.
+  <br> 
+  <table>
+  <tr>
+    <td>EasyEnsembleClassifier Algorithm Precision and Recall Scores</td>
+  </tr>
+  <tr>
+    <td><img src="Images/Easy Ensemble AdaBoost Report.PNG" width=500></td>
   </tr>
   </table>
 
