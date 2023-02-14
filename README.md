@@ -2,7 +2,7 @@
 
 ## **Overview of Credit_Risk_Analysis**
 
-### To assist LendingClub in analyzing the credit card credit dataset, use imbalanced-learn and scikit-learn libraries to build models using the following resampling algorithms and ensemble classifiers: RandomOverSampler, SMOTE, ClusterCentroids, SMOTEENN, BalancedRandomForestClassifier, and EasyEnsembleClassifier. Evaluate the performance of the abovementioned models and determine whether they should be used to predict credit risk. 
+To assist LendingClub in analyzing the credit card credit dataset, use imbalanced-learn and scikit-learn libraries to build models using the following resampling algorithms and ensemble classifiers: RandomOverSampler, SMOTE, ClusterCentroids, SMOTEENN, BalancedRandomForestClassifier, and EasyEnsembleClassifier. Evaluate the performance of the abovementioned models and determine whether they should be used to predict credit risk. 
 
 ## **Results**
 
