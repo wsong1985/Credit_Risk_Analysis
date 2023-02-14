@@ -106,7 +106,7 @@
   </tr>
   </table>
   
-- **BalancedRandomForestClassifier Algorithm**
+- **Model with BalancedRandomForestClassifier Algorithm**
   
    * The balanced accuracy score was 0.7888.
   <br> 
@@ -131,7 +131,7 @@
   </tr>
   </table>
 
-- **EasyEnsembleClassifier Algorithm**
+- **Model with EasyEnsembleClassifier Algorithm**
   
    * The balanced accuracy score was 0.9316.
   <br> 
@@ -158,19 +158,14 @@
 
 ## **Summary**
 
-- **Is there any positivity bias for reviews in the Vine program?**
+- **Findings:**
 
-  * According to my study, the percentages of Vine and non-Vine 5-star reviews were extremely close. The calculation for non-Vine reviews was conducted with a large sample size, which allowed a more precise approximation for the outcome. Based on the result, there was no positivity bias for 5-star reviews in the Vine program, or the existing bias was so trivial that it could be neglected.
+  * Based on the results, the model with the EasyEnsembleClassifier algorithm had the highest balanced accuracy score of 0.9316, with the run-up of the BalancedRandomForestClassifier algorithm, which scored 0.7888.
 
-- **Additional analysis is recommended.**
-  
-  * Taking a step further, we can conduct a similar test for 4-star reviews to see if the result is similar to the result for 5-star reviews.
-  * Based on the result, the percentage of Vine 4-star reviews was 0.34, and the non-Vine 4-star reviews was 0.16. There is a possibe bias for 4-star reviews in the Vine program.
-  <table>
-  <tr>
-    <td>The Percentages of 4-star Vine and non-Vine Reviews</td>
-  </tr>
-  <tr>
-    <td><img src="Images/4_star_reviews_Percentages.PNG" width=400></td>
-  </tr>
-  </table>
+  * All six machine learning algorithms had the same precision score for low_risk loans; however, the EasyEnsembleClassifier algorithm had a higher precision score for high_risk loans than the other algorithms.
+
+  * The EasyEnsembleClassifier algorithm had the highest recall scores for high_risk and low_risk loans among the algorithms.
+
+- **Conclusion:**
+
+  * The machine learning model with the EasyEnsembleClassifer algorithm seems to be the best fit for credit risk prediction.
