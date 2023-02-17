@@ -160,7 +160,7 @@ To assist LendingClub in analyzing the credit card credit dataset, use imbalance
 
 - **Findings:**
 
-  * Based on the results, the model with the EasyEnsembleClassifier algorithm had the highest balanced accuracy score of 0.9316, with the run-up of the BalancedRandomForestClassifier algorithm, which scored 0.7888.
+  * Based on the results, the model with the EasyEnsembleClassifier algorithm had the highest balanced accuracy score of 0.9316, with the BalancedRandomForestClassifier algorithm coming up second best, which scored 0.7888.
 
   * All six machine learning algorithms had the same precision score for low_risk loans; however, the EasyEnsembleClassifier algorithm had a higher precision score for high_risk loans than the other algorithms.
 
